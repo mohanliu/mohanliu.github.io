@@ -14,3 +14,6 @@ $ rbenv global 2.5.0
 $ ruby -v
 $ gem install jekyll
 ```
+**Further steps following Github Page instructions**
+
+Check page: [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
