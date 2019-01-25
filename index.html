@@ -87,7 +87,7 @@
 					</p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>Expected June 2019</sm><br/>
+					<p><sm>Sep. 2013 - July 2018 (Expected)</sm><br/>
 					<imp><sm>IN PROGRESS</sm></imp>
 					</p>
 				</div>
@@ -100,7 +100,7 @@
 					</p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>JULY 2013</sm></p>
+					<p><sm>Sep. 2009 - July 2013</sm></p>
 				</div>
 
 				<!-- EDIT: education line 3 -->
@@ -111,7 +111,7 @@
 					</p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>SEPTEMBER 2012</sm></p>
+					<p><sm>July 2012 – Sep. 2012</sm></p>
 				</div>
 	
 		</div><!--/.row -->
@@ -129,7 +129,7 @@
 				<!-- EDIT: work line 1 -->
 				<div class="col-lg-6">
 					<p class="tight"><t>Python</t><br/> 
-					5+ years, including data mining and visualization, web scrapping and machine/deep learning.</p>
+					5+ years, including data mining and visualization, GUI creation, REST API, web scrapping and machine/deep learning.</p>
 				</div>
 				<div class="col-lg-6 col-lg-offset-3">
 					<p class="tight"><t>Data analysis skills</t><br/> 
@@ -137,12 +137,70 @@
 				</div>
 				<div class="col-lg-6 col-lg-offset-3">
 					<p class="tight"><t>Other skills</t><br/> 
-					Expert knowledge with C++, Git, Docker, AWS, web API and HTML.</p>
+					Expert knowledge with C++, Git, Docker, AWS, HTML and Latex; familiarity with WebGL and JavaScript.</p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Operating systems</t><br/> 
+					Linux, Mac OS and Windows. </p>
 				</div>
 		</div><!--/.row -->
 		<br>
 		<hr>
 	</div><!--/.container -->
+
+	<!-- Data Projects SECTION -->
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>DATA SCIENCE PROJECTS</h5>
+				</div>
+
+				<!-- EDIT: project line 1-->
+				<div class="col-lg-6">
+					<p><t>Home Credit Default Risk</t><br/>
+					 <i>Predict how capable each applicant is of repaying a loan <a href="https://www.kaggle.com/c/home-credit-default-risk" target="_blank"> (<u>Kaggle Chanllenge Link</u>)</a></i>
+						<li>Applied one-hot encoding for categorical features and preformed PCA to reduce dimensions. Conducted
+recursively feature elimination to further extract the most important features.</li>
+						<li>Trained a large dataset with more than 300,000 observations using gradient boost decision tree model
+(using LightGBM) and our predicted area under the ROC curve is 0.796.</li>
+						<li>Ensemble and cross validation have been utilized to overcome potential overfitting. Amazon Web Services
+(AWS) has been used to accelerate training process.</li><br/>
+					<p><more><a href="https://github.com/LowPass-DataScience/home-credit-default-risk" target="_blank"><b>Github repository</b></a></more></p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>May 2018</sm></p>
+				</div>
+	
+				<!-- EDIT: project line 2-->
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Avito Demand Prediction Challenge </t><br/>
+					    <i>Predict demand for an online classified advertisement <a href="https://www.kaggle.com/c/avito-demand-prediction" target="_blank"> (<u>Kaggle Chanllenge Link</u>)</a></i>
+						<li>Applied latent semantic analysis for natural language processing (using NLTK and polyglot) to extract test features from advertisement titles and descriptions. Trained convolutional neural network (using TenserFlow) to collect image features from images of items provided by each seller.</li>
+						<li>Stored large datasets (more than 15 GB in total) using Hierarchical Data Format (HDF) and Feather format to facilitate data I/O. Performed multiprocessing to accelerate feature engineering process.</li>
+						<li>Trained the dataset with more than 1,500,000 observations and 900 features using gradient boost decision tree model (using LightGBM) and our predicted RMSE is 0.2236 (ranked top 11%).</li> </br>
+					<more><a href="https://github.com/LowPass-DataScience/avito-demand-prediction-chanllege" target="_blank"><b>Github repository</b></a></more></p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>June 2018</sm></p>
+				</div>
+
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Divvy Chicago Bicycle Sharing project</t><br/>
+						<i>Predict the daily need of bikes for each divvy station and search for new locations to open a new Divvy Bicycle station.</i>
+						<li>Applied data collection from mutiple websites to scratch data including divvy bike sharing data, weather of Chicago data, public safety and public transportation in Chicago, and etc.</li>
+						<li>Performed Exploratory Data Analysis (EDA) to visualize divvy bikes used over different time periods, analyze data of each trip with respect to the geospatical data (such as crime occurance near a bike station) and investigate the correlation between bike usage and weather of that day.</li>
+						<li>Build regression models using random forest, gradient boost and neural network to predict the daily need of bike.</li></br>
+					<more><a href="https://github.com/mohanliu/divvy-chicago-data" target="_blank"><b>Github repository</b></a></more></p>
+				</div>
+				<div class="col-lg-3">
+					<imp><sm>IN PROGRESS</sm></imp>
+				</div>
+		
+		</div><!--/.row -->
+		<br>
+		<hr>
+	</div><!--/.container -->
+
 
 	<!-- Research Projects SECTION -->
 	<div class="container desc">
@@ -153,30 +211,79 @@
 
 				<!-- EDIT: awards line 1-->
 				<div class="col-lg-6">
-					<p><t>Materials informatics: large databases and machine learning for materials design and discovery</t><br/>
-						Award-giving organization<br/>
+					<p><t>Materials informatics: large databases and machine learning for materials design and discovery</t></br>
+						Advisor: Professor Chris Wolverton, Northwestern University, IL
+						<li>Managing and maintaining a computational materials database (using MySQL) containing calculated physical and chemical properties for >600,000 compounds.</li>
+						<li>Developed a simple and efficient web API based on REpresentational State Transfer (REST) principles to provide the community with an easy access to our database.</li>
+						<li>Trained three regression models (LASSO, SVR and random-forest) using our materials dataset and predicted materials band gaps with ~20% relative RMSE. Constructed our feature space using elemental-property- based attributes and perform univariate feature selection to reduce feature dimensions.</li>
+						<br/>
 					</p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>NOVEMBER 2013</sm></p>
+					<p><sm>June 2017 - June 2019</sm></p>
+					<imp><sm>IN PROGRESS</sm></imp>
 				</div>
 	
 				<!-- EDIT: awards line 2-->
 				<div class="col-lg-6 col-lg-offset-3">
-					<p class="tight"><t>Another award</t><br/>
-						Awards Site
+					<p class="tight"><t>Predictive modeling of adsorbate coverage and compositional effects on catalytic activity</t><br/>
+						Advisor: Professor Chris Wolverton, Northwestern University, IL
+						<li>Investigated interplay of compositional and local atomic ordering on adsorption at a bimetallic surface alloy to search for optimal catalyst with high activity and low cost.</li>
+						<li>Generated computed materials data for >500 different crystal structures and applied a linear regression model to predict catalytic activity at alloyed surfaces with less than 1% relative RMSE. </li>
+						<li>Trained a classification model to create a strategy to determine which method should be used when studying a certain alloy catalyst, which can reduce the overall computational cost by over 50%.</li>
+					</br>
 					</p>
-					<p><more>This award has a description. You won it eating pie. Or probably doing something more job-related. Maybe you won't even keep this section - you'll replace it with Skills or something else!</more></p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>2013</sm></p>
+					<p><sm>Sep. 2013 - June 2017</sm></p>
+				</div>
+
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Improved Heisenberg Model calculation for ferromagnetic system</t><br/>
+						Supervisor: Professor Vidvuds Ozolins, UCLA, CA
+				 		<li>Improved Heisenberg Model by adding long-range and multi-body (triplets and quadruplets) interaction and calculated the Curie Temperature of ferromagnetic materials. </li>
+						<li>Mastered Vienna Ab initio Simulation Package (VASP), a program for atomic scale materials modeling from first principles.</li>
+						<li>Grasped Compressive Sensing method, generate my own code and applied it to physical calculation.</li>
+					</br>
+					</p>
+				</div><!--/.row -->
+				<div class="col-lg-3">
+					<p><sm>	July 2012 – Sep. 2012</sm></p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Synthesis and magnetic properties analysis of carbon-based nanotubes</t><br/>
+						Supervisor: Professor Wei Zhong, Nanjing University, China
+				 		<li>Dealt with synthesis and magnetic properties of carbon-based nanotubes. </li>
+						<li>Mastered chemical vapor deposition (CVD), a commonly used method of carbon nano-materials production, as well as Transmission Electron Microscope (TEM) and Scanning Electron Microscope (SEM).</li>
+						<li>Look for the most effective water-soluble catalysts to help the reaction (other than commonly used metal catalysts which are difficult to be removed from product).</li>
+					</br>
+					</p>
+				</div><!--/.row -->
+				<div class="col-lg-3">
+					<p><sm>	Sep. 2012 - June 2013</sm></p>
+				</div>
+		</div>
+		<br>
+		<hr>
+	</div><!--/.container -->
+
+	<!-- Publications SECTION -->
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>PUBLICATIONS</h5>
+				</div>
+
+				<!-- EDIT: awards line 1-->
+				<div class="col-lg-6">
+					<p>L. Huang, P. C. Chen, <u>M. Liu</u>, X. Fu, Y. Yu, P. Gordiichuk, Z. Xie, C. Wolverton, Y. Kang, C. A. Mirkin, <i>Catalyst design by DFT and scanning probe block copolymer lithography</i>, PNAS (2018)<br/>
+					</p>
 				</div>
 		
 		</div><!--/.row -->
 		<br>
 		<hr>
 	</div><!--/.container -->
-
 
 	<!-- AWARDS SECTION -->
 	<div class="container desc">
@@ -187,29 +294,65 @@
 
 				<!-- EDIT: awards line 1-->
 				<div class="col-lg-6">
-					<p><t>Best Smile Award</t><br/>
-						Award-giving organization<br/>
+					<p class="tight"><t>Hierarchical Materials Cluster Program fellowship</t><br/>
+						Northwestern University
 					</p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>NOVEMBER 2013</sm></p>
+					<p><sm>Oct. 2014</sm></p>
 				</div>
 	
 				<!-- EDIT: awards line 2-->
 				<div class="col-lg-6 col-lg-offset-3">
-					<p class="tight"><t>Another award</t><br/>
-						Awards Site
+					<p class="tight"><t>Excellent Leader of Student Union</t><br/>	
+					Nanjing University		
 					</p>
-					<p><more>This award has a description. You won it eating pie. Or probably doing something more job-related. Maybe you won't even keep this section - you'll replace it with Skills or something else!</more></p>
 				</div>
 				<div class="col-lg-3">
-					<p><sm>2013</sm></p>
+					<p><sm>July 2011</sm></p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Outstanding Student Model of Nanjing University</t><br/>		
+					Nanjing University, <i>awarded to top 0.15%</i>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>May 2011</sm></p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>National Scholarship</t><br/>		
+					Nanjing University, <i>awarded to top 1.5%</i>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>Nov 2010</sm></p>
+				</div>
+		
+		</div><!--/.row -->
+		<br>
+		<hr>
+	</div><!--/.container -->
+	
+	<!-- Additional information SECTION -->
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>ADDITIONAL INFORMATION</h5>
+				</div>
+
+				<!-- EDIT: awards line 1-->
+				<div class="col-lg-6">
+					<p><t>Languages</t><br/>
+						 Native Speaker of Mandarin; Fluent in English
+					</p>
+					<p><t>Interests</t><br/>
+						Bass, guitar, basketball, skiing, swimming
+					</p>
 				</div>
 		
 		</div><!--/.row -->
 		<br>
 	</div><!--/.container -->
-	
 
 	<section id="contact" name="contact"></section>
 	<!--FOOTER DESCRIPTION -->
