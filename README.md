@@ -17,3 +17,7 @@ $ gem install jekyll
 **Further steps following Github Page instructions**
 
 Check page: [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+
+**Run local jekyll server**:
+
+`bundle exec jekyll serve`
