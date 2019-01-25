@@ -21,3 +21,6 @@ Check page: [Setting up your GitHub Pages site locally with Jekyll](https://help
 **Run local jekyll server**:
 
 `$ bundle exec jekyll serve`
+
+## Create website
+[Create website from Scratch](https://medium.com/@robcobbable/make-a-resume-website-from-scratch-991845147ec)
