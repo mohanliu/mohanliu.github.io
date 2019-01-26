@@ -20,6 +20,11 @@ $ gem install bundler
 
 Check page: [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 
+```
+$ cd YOUR-GithubPage-Repository
+$ bundle install 
+```
+
 **Run local jekyll server**:
 
 `$ bundle exec jekyll serve`
