@@ -28,25 +28,46 @@
           new go.Binding("text", "name"))
       );
 
-    // The color of a link (including its arrowhead) is red only when both
-    // connected nodes have data that is ".critical"; otherwise it is blue.
-    // This is computed by the binding converter function.
+
+    // replace the default Link template in the linkTemplateMap
     myDiagram.linkTemplate =
-      $(go.Link,
-        { toShortLength: 6, toEndSegmentLength: 20 },
-        $(go.Shape,
-          { strokeWidth: 4 },
-          new go.Binding("stroke", "")),
-        $(go.Shape,  // arrowhead
-          { toArrow: "Triangle", stroke: null, scale: 1.5 },
-          new go.Binding("fill", ""))
+      $(go.Link,  // the whole link panel
+        {
+          routing: go.Link.AvoidsNodes,
+          curve: go.Link.JumpOver,
+          corner: 5, toShortLength: 4,
+          // relinkableFrom: true,
+          // relinkableTo: true,
+          // reshapable: true,
+          // resegmentable: true,
+          // mouse-overs subtly highlight links:
+          mouseEnter: function(e, link) { link.findObject("HIGHLIGHT").stroke = "rgba(30,144,255,0.2)"; },
+          mouseLeave: function(e, link) { link.findObject("HIGHLIGHT").stroke = "transparent"; },
+          selectionAdorned: false
+        },
+        new go.Binding("points").makeTwoWay(),
+        $(go.Shape,  // the highlight shape, normally transparent
+          { isPanelMain: true, strokeWidth: 8, stroke: "transparent", name: "HIGHLIGHT" }),
+        $(go.Shape,  // the link path shape
+          { isPanelMain: true, stroke: "gray", strokeWidth: 2 },
+          new go.Binding("stroke", "isSelected", function(sel) { return sel ? "dodgerblue" : "gray"; }).ofObject()),
+        $(go.Shape,  // the arrowhead
+          { toArrow: "standard", strokeWidth: 0, fill: "gray"}),
+        $(go.Panel, "Auto",  // the link label, normally not visible
+          { visible: false, name: "LABEL", segmentIndex: 2, segmentFraction: 0.5},
+          new go.Binding("visible", "visible").makeTwoWay(),
+          $(go.Shape, "RoundedRectangle",  // the label shape
+            { fill: "#F8F8F8", strokeWidth: 0 }),
+          $(go.TextBlock, "Yes",  // the label
+            {
+              textAlign: "center",
+              font: "10pt helvetica, arial, sans-serif",
+              stroke: "#333333",
+              editable: true
+            },
+            new go.Binding("text").makeTwoWay())
+        )
       );
-    // myDiagram.linkTemplate =
-    //   $(go.Link,
-    //     { routing: go.Link.Orthogonal, corner: 5 },
-    //     $(go.Shape, { strokeWidth: 3, stroke: "#555" })); // the link shape
-    // // but use the default Link template, by not setting Diagram.linkTemplate
-    // // create the model data that will be represented by Nodes and Links
 
     var nodeDataArray = [
       { key: 0, name: "Avito Chanllenge", loc: "0 0", color: "lightblue" },
