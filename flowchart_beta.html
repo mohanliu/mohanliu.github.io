@@ -23,26 +23,45 @@
           // Shape.fill is bound to Node.data.color
           new go.Binding("fill", "color")),
         $(go.TextBlock,
-          { margin: 12, width:80, height: 40, textAlign: "center", font: "bold 14pt serif" },  // some room around the text
+          { margin: 12, width:80, height: 40, textAlign: "center", font: "bold 12pt serif" },  // some room around the text
           // TextBlock.text is bound to Node.data.key
-          new go.Binding("text", "key"))
+          new go.Binding("text", "name"))
       );
-    // but use the default Link template, by not setting Diagram.linkTemplate
-    // create the model data that will be represented by Nodes and Links
-    myDiagram.model = new go.GraphLinksModel(
-    [
-      { key: "Alpha", loc: "0 0", color: "lightblue" },
-      { key: "Beta", loc: "-100 100", color: "orange" },
-      { key: "Gamma", loc: "100 100", color: "lightgreen" },
-      { key: "Delta", loc: "10 200", color: "pink" }
-    ],
-    [
-      { from: "Alpha", to: "Beta" },
-      { from: "Alpha", to: "Gamma" },
-      { from: "Beta", to: "Beta" },
-      { from: "Gamma", to: "Delta" },
-      { from: "Delta", to: "Alpha" }
-    ]);
+
+    // The color of a link (including its arrowhead) is red only when both
+    // connected nodes have data that is ".critical"; otherwise it is blue.
+    // This is computed by the binding converter function.
+    myDiagram.linkTemplate =
+      $(go.Link,
+        { toShortLength: 6, toEndSegmentLength: 20 },
+        $(go.Shape,
+          { strokeWidth: 4 },
+          new go.Binding("stroke", "")),
+        $(go.Shape,  // arrowhead
+          { toArrow: "Triangle", stroke: null, scale: 1.5 },
+          new go.Binding("fill", ""))
+      );
+    // myDiagram.linkTemplate =
+    //   $(go.Link,
+    //     { routing: go.Link.Orthogonal, corner: 5 },
+    //     $(go.Shape, { strokeWidth: 3, stroke: "#555" })); // the link shape
+    // // but use the default Link template, by not setting Diagram.linkTemplate
+    // // create the model data that will be represented by Nodes and Links
+
+    var nodeDataArray = [
+      { key: 0, name: "Avito Chanllenge", loc: "0 0", color: "lightblue" },
+      { key: 1, name: "General infomation", loc: "-200 100", color: "orange" },
+      { key: 2, name: "Text data", loc: "0 100", color: "lightgreen" },
+      { key: 3, name: "Images", loc: "200 100", color: "pink" }
+    ]
+
+    var linkDataArray = [
+      { from: 0, to: 1 },
+      { from: 0, to: 2 },
+      { from: 0, to: 3 }
+    ]
+
+    myDiagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
   }
 </script>
 </head>
