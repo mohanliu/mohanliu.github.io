@@ -334,3 +334,52 @@ div.sticky_contact {
         background-color: #2f2f2f;
         z-index: 1;
     }
+
+div.index {
+  margin-top: 160px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.button {
+  background-color: rgba(255,255,255,0.5); 
+  border: none;
+  color: white;
+  padding: 7px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button_index {
+  background-color:rgba(255,255,255,0.6); 
+  color: #2c3e50; 
+  border: 0px solid white;
+}
+
+.button_index:hover {
+  background-color: #2c3e50;
+  color: white;
+}
+
+a.index {
+  color: #2c3e50; 
+  word-wrap: break-word;
+}
+a.index:hover,
+a.index:focus {
+  color: white;
+  text-decoration: none;
+  outline: 0;
+}
+
+a.index:before,
+a.index:after,
