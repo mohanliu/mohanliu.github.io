@@ -176,8 +176,8 @@
 
     myDiagram.nodeTemplateMap.add("Comment",
       $(go.Node, "Auto", nodeStyle(),
-        $(go.Shape, "File",
-          { fill: "#DEE0A3", strokeWidth: 0 }),
+        $(go.Shape, "RoundedRectangle",
+          { fill: "lightgreen", strokeWidth: 0 }),
         $(go.TextBlock, textStyle(),
           {
             margin: 5,
@@ -244,16 +244,27 @@
 	{"key":-1, "category":"Start", "loc":"175 -50", "text":"Start"},
 	{"key":0, "loc":"-200 75", "text":"General information"},
 	{"key":1, "loc":"175 75", "text":"Text data"},
-	{"key":2, "loc":"500 75", "text":"Images"},
+	{"key":2, "loc":"550 75", "text":"Images"},
   {"key":3, "loc":"50 150", "text": "Basic counting"},
 	{"key":4, "loc":"175 150", "text":"LSA"},
   {"key":5, "loc": "300 150", "text":"word ranking"},
-  {"key":6, "loc": "-350 150", "text":"Raw info"},
+  {"key":6, "loc": "-320 150", "text":"Raw info"},
   {"key":7, "loc": "-200 150", "text":"Supervised score"},
   {"key":8, "loc": "-75 150", "text":"Geometry"},
-	{"key":7, "loc":"175 515", "text":"Bake for 25 minutes and let cool"},
-	{"key":8, "loc":"175 585", "text":"Cut into rectangular grid"},
-	{"key":-2, "category":"End", "loc":"175 660", "text":"Enjoy!"}
+  {"key":9, "loc": "450 150", "text":"Genenral image features"},
+  {"key":10, "loc": "650 150", "text":"CNN"},
+  {"key":11, "loc": "-320 250", "text":"Info", "category":"Comment"},
+  {"key":12, "loc": "-200 250", "text":"Info", "category":"Comment"},
+  {"key":13, "loc": "-75 250", "text":"Info", "category":"Comment"},
+  {"key":14, "loc": "50 250", "text":"Info", "category":"Comment"},
+  {"key":15, "loc": "175 250", "text":"Info", "category":"Comment"},
+  {"key":16, "loc": "300 250", "text":"Info", "category":"Comment"},
+  {"key":17, "loc": "450 250", "text":"Info", "category":"Comment"},
+  {"key":18, "loc": "650 250", "text":"Info", "category":"Comment"},
+  {"key":19, "loc": "-200 400", "text":"Basic features"},
+  {"key":20, "loc": "175 400", "text":"Text features"},
+  {"key":21, "loc": "550 400", "text":"Image features"},
+	{"key":-2, "category":"End", "loc":"175 550", "text":"GBDT"}
 	]
 
   	var linkDataArray = [
@@ -265,7 +276,28 @@
   {"from":1, "to":5, "fromPort":"B", "toPort":"T"},
   {"from":0, "to":6, "fromPort":"B", "toPort":"T"},
   {"from":0, "to":7, "fromPort":"B", "toPort":"T"},
-  {"from":0, "to":8, "fromPort":"B", "toPort":"T"}
+  {"from":0, "to":8, "fromPort":"B", "toPort":"T"},
+  {"from":2, "to":9, "fromPort":"B", "toPort":"T"},
+  {"from":2, "to":10, "fromPort":"B", "toPort":"T"},
+  {"from":6, "to":11, "fromPort":"B", "toPort":"T"},
+  {"from":7, "to":12, "fromPort":"B", "toPort":"T"},
+  {"from":8, "to":13, "fromPort":"B", "toPort":"T"},
+  {"from":3, "to":14, "fromPort":"B", "toPort":"T"},
+  {"from":4, "to":15, "fromPort":"B", "toPort":"T"},
+  {"from":5, "to":16, "fromPort":"B", "toPort":"T"},
+  {"from":9, "to":17, "fromPort":"B", "toPort":"T"},
+  {"from":10, "to":18, "fromPort":"B", "toPort":"T"},
+  {"from":11, "to":19, "fromPort":"B", "toPort":"T"},
+  {"from":12, "to":19, "fromPort":"B", "toPort":"T"},
+  {"from":13, "to":19, "fromPort":"B", "toPort":"T"},
+  {"from":14, "to":20, "fromPort":"B", "toPort":"T"},
+  {"from":15, "to":20, "fromPort":"B", "toPort":"T"},
+  {"from":16, "to":20, "fromPort":"B", "toPort":"T"},
+  {"from":17, "to":21, "fromPort":"B", "toPort":"T"},
+  {"from":18, "to":21, "fromPort":"B", "toPort":"T"},
+  {"from":19, "to":-2, "fromPort":"B", "toPort":"T"},
+  {"from":20, "to":-2, "fromPort":"B", "toPort":"T"},
+  {"from":21, "to":-2, "fromPort":"B", "toPort":"T"},
  ]
 
 	myDiagram.model = new go.GraphLinksModel();
