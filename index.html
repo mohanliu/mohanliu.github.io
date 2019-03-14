@@ -16,8 +16,9 @@
     <title>Mohan Liu</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--     <link href="css/bootstrap.css" rel="stylesheet">
+ -->    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- Link the main.css stylesheet -->
     <link href="css/main.css" rel="stylesheet">
@@ -51,36 +52,50 @@
   	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   	<section id="home" name="home"></section>
-  	<ul class="topnav">
-<!--   	  <li><a href="#home"><i class='fas fa-home'></i></a></li>
- -->	  
- 	  <li><a href="#about">About</a></li>
-	  <li><a href="#edu">Education</a></li>
-	  <li><a href="#skills">Skills</a></li>
-
-	  <li class="dropdown right">
-	    <a class="dropbtn">Projects <i class="fa fa-caret-down"></i></a>
-	    <div class="dropdown-content">
-	      <a href="#dataproj">Data Science Projects</a>
-	      <a href="#research">Research Projects</a>
-	    </div>
-	  </li>
-
-	  <li class="dropdown right">
-	    <a class="dropbtn">Others <i class="fa fa-caret-down"></i></a>
-	    <div class="dropdown-content">
-	      <a href="#pub">Publications</a>
-	      <a href="#awards">Awards</a>
-	      <a href="#add">Additional Information</a>
-	    </div>
-	  </li>
-	  <li><a href="#contact">Contact</a></li>
-	</ul>
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e50;">
+	  <a class="navbar-brand" href="#home"><i class='fas fa-home'></i></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#about" style="font-weight: 500; color: white">About</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#edu" style="font-weight: 500; color: white">Education</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#skills" style="font-weight: 500; color: white">Skills</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 500; color: white">
+	          Projects
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#dataproj">Data Science Projects</a>
+	          <a class="dropdown-item" href="#research">Research Projects</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 500; color: white">
+	          Others
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#pub">Publications</a>
+	          <a class="dropdown-item" href="#awards">Awards</a>
+	          <a class="dropdown-item" href="#add">Additional Information</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#contact" style="font-weight: 500; color: white">Contact</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
 
   	<div id="header" class="header">
 		<div class="container">
 			<div>
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 					<!-- EDIT: name -->
 					<h1>Mohan Liu</h1>
 					<!-- EDIT: title | email -->
@@ -92,17 +107,6 @@
 <!-- 					<h3> Data Enthusiast | <a href="mailto:mohan@u.northwestern.edu" target="_blank">mohan@u.northwestern.edu</a></h3> -->
 				</div><!--/.col-lg-12 -->
 			</div><!--/.row -->
-			<!-- <div class="index col-lg-12" >
-				<button class="button button_index"><a class="index" href="#about">About</a></button>
-				<button class="button button_index"><a class="index" href="#edu">Education</a></button>
-				<button class="button button_index"><a class="index" href="#skills">Technical Skills</a></button>
-				<button class="button button_index"><a class="index" href="#dataproj">Data Science Projects</a></button>
-				<button class="button button_index"><a class="index" href="#research">Research Projects</a></button>
-				<button class="button button_index"><a class="index" href="#pub">Publications</a></button>
-				<button class="button button_index"><a class="index" href="#awards">Awards</a></button>
-				<button class="button button_index"><a class="index" href="#add">Additional Information</a></button>
-				<button class="button button_index"><a class="index" href="#contact">Contact</a></button>
-			</div> -->
 		</div><!--/.container -->
 	</div><!--/.header -->
 	
@@ -112,7 +116,7 @@
 		<div class="container">
 			<div class="row">
 				
-				<div class="col-lg-2 col-lg-offset-1 sticky_about">
+				<div class="col-lg-2 offset-lg-1 sticky_about">
 					<h5>ABOUT</h5>
 				</div>
 				<div class="col-lg-6">
@@ -138,7 +142,7 @@
 	<div class="container desc">
 		<div class="row">
 
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>EDUCATION</h5>
 				</div>
 				<!-- EDIT: education line 1 -->
@@ -157,7 +161,7 @@
 				</div>
 	
 				<!-- EDIT: education line 2 -->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p><t>Bachelor of Science,  Physics </t><br/>
 						 Nanjing University, China</br>
 						 Cumulative GPA: 3.89/4.0 | Major GPA: 3.96/4.0 | Class Rank: 2/170 <br>
@@ -170,7 +174,7 @@
 				</div>
 
 				<!-- EDIT: education line 3 -->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p><t>Exchange Program, Cross-disciplinary Scholars in Science and Technology (CSST)</t><br/>
 						 UCLA, Los Angeles, CA
 						<!--<br/><i>Extra info here</i>-->
@@ -190,7 +194,7 @@
 	<div class="container desc">
 		<div class="row">
 
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>TECHNICAL SKILLS</h5>
 				</div>
 				<!-- EDIT: work line 1 -->
@@ -198,22 +202,22 @@
 					<p class="tight"><t>Python</t><br/> 
 					5+ years, including data mining and visualization, GUI creation, REST API, web design, web data scrapping and machine/deep learning.</p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Data analysis skills</t><br/> 
 					Proficiency with Python packages including <i>Pandas</i>, <i>Scikit-learn</i>, <i>LightGBM</i>, <i>Keras</i>, <i>TenserFlow</i> and etc.;<br>
 					Strong experience with database systems including MySQL and MongoDB;<br>
 					Some experience using R and Perl. </p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Other skills</t><br/> 
 					Expert knowledge with C++, Git, Docker, AWS, HTML and Latex; <br>
 					Familiarity with WebGL and JavaScript.</p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Operating systems</t><br/> 
 					Linux, Mac OS and Windows. </p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 				<button class="collapsible"><i><u>Click here to see how I evaluate my skills</u></i></button>
 				<div class="content">
 					<br>
@@ -263,7 +267,7 @@
 					</div>
 				</div>
 			</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 				<button class="collapsible"><i><u>Click here to see my skill cloud</u></i></button>
 				<div class="content">
 					<!-- Creative Commons Licence (by-nc-nd). See worditout.com for details -->
@@ -283,7 +287,7 @@
 	<section id="dataproj" name="dataproj"></section>
 	<div class="container desc">
 		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>DATA SCIENCE PROJECTS</h5>
 				</div>
 
@@ -304,7 +308,7 @@ recursively feature elimination to further extract the most important features.<
 				</div>
 	
 				<!-- EDIT: project line 2-->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Avito Demand Prediction Challenge </t><br/>
 					    <i>Predict demand for an online classified advertisement <a href="https://www.kaggle.com/c/avito-demand-prediction" target="_blank"> (<u>Kaggle Chanllenge Link</u>)</a></i>
 						<li>Applied latent semantic analysis for natural language processing (using NLTK and polyglot) to extract test features from advertisement titles and descriptions. Trained convolutional neural network (using TenserFlow) to collect image features from images of items provided by each seller.</li>
@@ -316,7 +320,7 @@ recursively feature elimination to further extract the most important features.<
 					<p><sm>June 2018</sm></p>
 				</div>
 
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Divvy Chicago Bicycle Sharing project</t><br/>
 						<i>Predict the daily need of bikes for each divvy station and search for new locations to open a new Divvy Bicycle station.</i>
 						<li>Applied data collection from mutiple websites to scratch data including divvy bike sharing data, weather of Chicago data, public safety and public transportation in Chicago, and etc.</li>
@@ -338,7 +342,7 @@ recursively feature elimination to further extract the most important features.<
 	<section id="research" name="research"></section>
 	<div class="container desc">
 		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>RESEARCH PROJECTS</h5>
 				</div>
 
@@ -359,7 +363,7 @@ recursively feature elimination to further extract the most important features.<
 				</div>
 	
 				<!-- EDIT: awards line 2-->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Predictive modeling of adsorbate coverage and compositional effects on catalytic activity</t><br/>
 						Advisor: Professor Chris Wolverton, Northwestern University, IL
 						<li>Investigated interplay of compositional and local atomic ordering on adsorption at a bimetallic surface alloy to search for optimal catalyst with high activity and low cost.</li>
@@ -372,7 +376,7 @@ recursively feature elimination to further extract the most important features.<
 					<p><sm>Sep. 2013 - June 2017</sm></p>
 				</div>
 
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Improved Heisenberg Model calculation for ferromagnetic system</t><br/>
 						Supervisor: Professor Vidvuds Ozolins, UCLA, CA
 				 		<li>Improved Heisenberg Model by adding long-range and multi-body (triplets and quadruplets) interaction and calculated the Curie Temperature of ferromagnetic materials. </li>
@@ -384,7 +388,7 @@ recursively feature elimination to further extract the most important features.<
 				<div class="col-lg-3">
 					<p><sm>	July 2012 – Sep. 2012</sm></p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Synthesis and magnetic properties analysis of carbon-based nanotubes</t><br/>
 						Supervisor: Professor Wei Zhong, Nanjing University, China
 				 		<li>Dealt with synthesis and magnetic properties of carbon-based nanotubes. </li>
@@ -405,7 +409,7 @@ recursively feature elimination to further extract the most important features.<
 	<section id="pub" name="pub"></section>
 	<div class="container desc">
 		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>PUBLICATIONS</h5>
 				</div>
 
@@ -437,7 +441,7 @@ recursively feature elimination to further extract the most important features.<
 	<section id="awards" name="awards"></section>
 	<div class="container desc">
 		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>AWARDS</h5>
 				</div>
 
@@ -452,7 +456,7 @@ recursively feature elimination to further extract the most important features.<
 				</div>
 	
 				<!-- EDIT: awards line 2-->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Excellent Leader of Student Union</t><br/>	
 					Nanjing University		
 					</p>
@@ -460,7 +464,7 @@ recursively feature elimination to further extract the most important features.<
 				<div class="col-lg-3">
 					<p><sm>July 2011</sm></p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Outstanding Student Model of Nanjing University</t><br/>		
 					Nanjing University, <i>awarded to top 0.15%</i>
 					</p>
@@ -468,7 +472,7 @@ recursively feature elimination to further extract the most important features.<
 				<div class="col-lg-3">
 					<p><sm>May 2011</sm></p>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>National Scholarship</t><br/>		
 					Nanjing University, <i>awarded to top 1.5%</i>
 					</p>
@@ -486,7 +490,7 @@ recursively feature elimination to further extract the most important features.<
 	<section id="add" name="add"></section>
 	<div class="container desc">
 		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 sticky">
+				<div class="col-lg-2 offset-lg-1 sticky">
 					<h5>ADDITIONAL INFORMATION</h5>
 				</div>
 
@@ -510,7 +514,7 @@ recursively feature elimination to further extract the most important features.<
 		<div class="container">
 			<div class="row">
 			
-				<div class="col-lg-2 col-lg-offset-1 sticky_contact">
+				<div class="col-lg-2 offset-lg-1 sticky_contact">
 					<h5>CONTACT</h5>
 				</div>
 				<!-- EDIT: email -->
@@ -546,6 +550,9 @@ recursively feature elimination to further extract the most important features.<
 
   </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -563,8 +570,8 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-<script>
 
+<script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 

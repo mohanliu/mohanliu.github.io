@@ -417,68 +417,6 @@ a.index:after,
   background-color: #f1f1f1;
 }
 
-/* navigation bar at the top of this page */
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 10px;
-    background-color: #2c3e50;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 13px 12px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-ul.topnav li:hover a:not(.active) {
-    background-color: #D3D3D3;
-    color: #000;
-}
-
-ul.topnav li a.active {
-    background-color: #D2691E;
-    color: white;
-}
-
-ul.topnav li.right {float: left;}
-
-@media screen and (max-width: 600px){
-    ul.topnav,
-    ul.topnav {position: unset}
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-}
-
-ul.topnav .dropdown-content {
-  display: none;
-  position: absolute;
-}
-
-ul.topnav .dropdown-content a {
-  color: black;
-  min-width: 186px;
-  text-align: left;
-  font-weight: 300;
-}
-
-ul.topnav .dropdown:hover > .dropdown-content {
-  display: block;
-}
-
-ul.topnav .dropdown-content a:hover {
-  background-color: #D2691E;
-  color: #000;
-}
-
 /* Back to top button design*/
 #myBtn {
   display: none;
