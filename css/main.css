@@ -70,12 +70,13 @@ a:after {
 /* Header Wrap */
 .header {
   background: #1CBCAD;
-  background: url(../images/iit.jpg) no-repeat top right;
+  background: url(../images/iit.jpg);
   padding-top: 200px;
   padding-bottom: : 200px;
   text-align:left;
+  background-repeat: no-repeat;
   background-attachment: relative;
-  background-position: center center;
+  background-position: 60% 0%;
   height: 600px;
   width: 100%;
   
