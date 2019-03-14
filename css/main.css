@@ -71,7 +71,6 @@ a:after {
 .header {
   background: #1CBCAD;
   background: url(../images/iit.jpg) no-repeat top right;
-  background-attachment:fixed;
   padding-top: 200px;
   padding-bottom: : 200px;
   text-align:left;
