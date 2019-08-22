@@ -216,7 +216,7 @@
 				</div>
 				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Machine Learning Algorithms</t><br/> 
-					Supporting Vector Machine, Random Forest (<i>Scikit-learn</i>), Gradient Boosting Decision Tree (<i>LightBGM</i>, <i>XGBoost</i>), Convolutional Neural Networks (<i>TensorFlow</i>, <i>PyTorch</i>), Latent Semantic Analysis</p>
+					Supporting Vector Machine, Random Forest (<i>Scikit-learn</i>), Gradient Boosting Decision Tree (<i>LightGBM</i>, <i>XGBoost</i>), Convolutional Neural Networks (<i>TensorFlow</i>, <i>PyTorch</i>), Latent Semantic Analysis</p>
 				</div>
 				<div class="col-lg-6 offset-lg-3">
 					<p class="tight"><t>Data Engineering</t><br/> 
@@ -299,22 +299,27 @@
 				<div class="col-lg-6">
 					<p class="tight"><t>Divvy Chicago Bicycle Sharing project</t><br/>
 						<i>Predict the daily need of bikes for each divvy station and search for new locations to open a new Divvy Bicycle station. <a href="https://divvy-exploration.herokuapp.com" target="_blank"> (<u>Web application</u>)</a></i>
-						<li>Applied data collection from mutiple websites to scratch data including divvy bike sharing data, weather of Chicago data, public safety and public transportation in Chicago, and etc.</li>
-						<li>Performed Exploratory Data Analysis (EDA) to visualize divvy bikes used over different time periods, analyze data of each trip with respect to the geospatical data (such as crime occurance near a bike station) and investigate the correlation between bike usage and weather of that day.</li>
-						<li>Build regression models using random forest, gradient boost and neural network to predict the daily need of bike.</li></br>
+						<li> Explored the Divvy bike sharing system in Chicago and deployed an end-to-end product to predict daily bike demand at each Divvy station on a future date </li>
+						<li> Applied time series forecasting using historical bike-trip data considering stationarity, seasonality, special events and historical Chicago weather; decreased the error by 50% compared with baseline model </li>
+						<li> Developed a <a href="https://divvystationmonitor.herokuapp.com" target="_blank"><font style="font-weight: 700;color: #34495e"><i>Live Station Status Monitor</i></font></a> to visualize the trend of available bikes/docks at each station over the past week </li>
+						<li> Built an ETL pipeline including extracting real-time data of Divvy bike station status using cron job
+						scheduler, transforming JSON format into PostgreSQL and loading the data into Google Cloud database</li>
+						</br>
 
 
 					<iframe src="htmls/from_station.html" style="height:350px;width:100%;"></iframe> 
 					<br />
-					<span style="font-weight:500"><i>Keywords: EDA, Web Scrapping, Time Series, Random Forest</i></span>
-					<br><more><a href="https://github.com/mohanliu/divvy-chicago-data" target="_blank"><b><i class="icon-github"></i> Github repository</b></a>
+					<span style="font-weight:500"><i>Keywords: EDA, Time Series, Random Forest, Google Cloud Platform</i></span>
+					<br><more><a href="https://github.com/mohanliu/divvy_station_monitor" target="_blank"><b><i class="icon-github"></i> Github repository 1</b></a><a href="https://github.com/mohanliu/divvy-chicago-data" target="_blank"><b><i class="icon-github" style="padding-left:10px"></i> Github repository 2</b></a>
 					</more>
 					</p>
 
 				</div>
 				<div class="col-lg-3">
-					<p><imp><sm>IN PROGRESS</sm></imp><br>
+					<p><sm>June 2019 - Aug. 2019</sm><br>
 					<img src="/images/divvy_logo.png" style="margin:auto; width: 60px; max-width: 50%;">
+					&nbsp&nbsp
+					<img src="/images/gcp.png" style="margin:auto; width: 90px; max-width: 50%;">
 				</p>
 				</div>
 
